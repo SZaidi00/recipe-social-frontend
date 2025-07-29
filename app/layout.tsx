@@ -11,32 +11,32 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: {
-    default: 'Recipe Social - Share Your Culinary Journey',
-    template: '%s | Recipe Social'
+    default: 'Tarkeeb - Share Your Culinary Journey',
+    template: '%s | Tarkeeb'
   },
   description: 'Connect with fellow food enthusiasts, share your favorite recipes, and discover new culinary adventures in our vibrant cooking community.',
   keywords: ['recipes', 'cooking', 'food', 'social', 'community', 'sharing'],
-  authors: [{ name: 'Recipe Social Team' }],
-  creator: 'Recipe Social',
+  authors: [{ name: 'Tarkeeb Team' }],
+  creator: 'Tarkeeb',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: process.env.NEXT_PUBLIC_APP_URL,
-    title: 'Recipe Social - Share Your Culinary Journey',
+    title: 'Tarkeeb - Share Your Culinary Journey',
     description: 'Connect with fellow food enthusiasts and share your favorite recipes',
-    siteName: 'Recipe Social',
+    siteName: 'Tarkeeb',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Recipe Social'
+        alt: 'Tarkeeb'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Recipe Social - Share Your Culinary Journey',
+    title: 'Tarkeeb - Share Your Culinary Journey',
     description: 'Connect with fellow food enthusiasts and share your favorite recipes',
     images: ['/og-image.png']
   },
@@ -81,10 +81,10 @@ export default function RootLayout({
         <meta name="color-scheme" content="light dark" />
         
         {/* PWA meta tags */}
-        <meta name="application-name" content="Recipe Social" />
+        <meta name="application-name" content="Tarkeeb" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Recipe Social" />
+        <meta name="apple-mobile-web-app-title" content="Tarkeeb" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="msapplication-TileColor" content="#f97316" />

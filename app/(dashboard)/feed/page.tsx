@@ -1,10 +1,11 @@
 "use client"
 
-export default function RecipeFeed(){
+
+export default function MainFeed() {
 
     return (
         <div>
-            hello
+            Hello
         </div>
     )
 }

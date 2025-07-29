@@ -8,7 +8,7 @@ export default function DashboardLayout({
       {/* Navbar will go here */}
       <nav className="bg-white shadow-sm border-b px-4 py-3">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-xl font-semibold">Recipe Social</h1>
+          <h1 className="text-xl font-semibold">Tarkeeb</h1>
         </div>
       </nav>
       

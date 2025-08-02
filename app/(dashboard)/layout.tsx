@@ -6,13 +6,12 @@ export default function DashboardLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <nav className="bg-emerald-800 shadow-lg border-b border-emerald-700">
+    <div className="w-full min-h-screen bg-[#FAF9EE]">
+      <nav className="max-w-full bg-[#A2AF9B] shadow-md border-b border-emerald-700">
         <Navbar />
       </nav>
       
-      {/* Main content */}
-      <main className="max-w-7xl mx-auto px-4 py-6">
+      <main className=" w-full">
         {children}
       </main>
     </div>

@@ -2,6 +2,7 @@ TODO:
 
 - need to set landing page correctly to show login 
 - need a color scheme 
+- need to figure best way to hook up all the apis 
 
 Auth: 
     - need to do login -- do i want to do google auth or have my own db? 
@@ -13,4 +14,8 @@ NAVBAR:
     - Need a logo 
     - need to figure out how to structure the settings 
     - need to setup logout --> logout screen --> re-route to login home page 
-    - need to  
+    - need to fix the location of the items and the way the search bar expands and moves the icons 
+
+
+Friends page: 
+    - current friends format needs to be changed-- tabbing between friends 

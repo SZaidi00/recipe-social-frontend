@@ -110,11 +110,11 @@ export default function RootLayout({
                 </a>
                 
                 {/* Main app content */}
-                <div id="root" className="min-h-screen flex flex-col">
-                  <main id="main-content" className="flex-1">
+          
+                  <main id="main-content" className="w-full">
                     {children}
                   </main>
-                </div>
+           
                 
                 {/* Toast notifications */}
                 {/* <Toaster /> */}

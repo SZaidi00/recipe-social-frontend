@@ -1,0 +1,16 @@
+TODO: 
+
+- need to set landing page correctly to show login 
+- need a color scheme 
+
+Auth: 
+    - need to do login -- do i want to do google auth or have my own db? 
+    - handle logout 
+    - need session expired? -- update token expiry time 
+     
+
+NAVBAR: 
+    - Need a logo 
+    - need to figure out how to structure the settings 
+    - need to setup logout --> logout screen --> re-route to login home page 
+    - need to  

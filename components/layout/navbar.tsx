@@ -35,7 +35,7 @@ export default function Navbar() {
           {/* Logo/Brand */}
           <button
             onClick={() => handleNavigation("/feed")}
-            className="text-white text-xl font-bold hover:text-emerald-200 transition-colors duration-200"
+            className="text-white text-xl font-bold hover:cursor-pointer "
           >
             Tarkeeb
           </button>
@@ -51,9 +51,12 @@ export default function Navbar() {
                 <Search className="h-5 w-5 text-emerald-300" />
               </div>
               <input
+                id="search-bar"
                 type="text"
-                placeholder="Search recipes, ingredients..."
-                className="w-full pl-10 pr-4 py-2 bg-emerald-700 border border-emerald-600 rounded-lg text-white placeholder-emerald-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300"
+                placeholder={
+                  isSearchExpanded ? "Search for recipes or users" : "Search"
+                }
+                className="w-full pl-10 pr-4 py-2 bg-emerald-700 border border-emerald-600 rounded-4xl text-white placeholder-emerald-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-300"
                 onFocus={() => setIsSearchExpanded(true)}
                 onBlur={() => setIsSearchExpanded(false)}
               />
@@ -61,27 +64,30 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Center Navigation Icons */}
-        <div className=" ml-auto flex items-center justify-center space-x-4">
+        {/* Navigation Icons */}
+        <div className=" ml-auto flex items-center justify-center space-x-4 ">
           <button
+            id="friends-nav"
             onClick={() => handleNavigation("/friends")}
-            className="p-2 text-emerald-200 hover:text-white hover:bg-emerald-700 rounded-lg transition-colors duration-200"
+            className="p-2 hover:cursor-pointer text-emerald-200 hover:text-white hover:bg-emerald-700 rounded-lg transition-colors duration-200"
             title="Friends"
           >
             <Users className="h-6 w-6" />
           </button>
 
           <button
+            id="my-recipe-nav"
             onClick={() => handleNavigation("/my-recipes")}
-            className="p-2 text-emerald-200 hover:text-white hover:bg-emerald-700 rounded-lg transition-colors duration-200"
+            className="p-2 hover:cursor-pointer text-emerald-200 hover:text-white hover:bg-emerald-700 rounded-lg transition-colors duration-200"
             title="My Recipes"
           >
             <BookOpen className="h-6 w-6" />
           </button>
 
           <button
+            id="notifications-nav"
             onClick={() => handleNavigation("/notifications")}
-            className="p-2 text-emerald-200 hover:text-white hover:bg-emerald-700 rounded-lg transition-colors duration-200 relative"
+            className="p-2 hover:cursor-pointer text-emerald-200 hover:text-white hover:bg-emerald-700 rounded-lg transition-colors duration-200 relative"
             title="Notifications"
           >
             <Bell className="h-6 w-6" />
@@ -92,8 +98,9 @@ export default function Navbar() {
           </button>
 
           <button
+            id="explore-nav"
             onClick={() => handleNavigation("/explore")}
-            className="p-2 text-emerald-200 hover:text-white hover:bg-emerald-700 rounded-lg transition-colors duration-200"
+            className="p-2 hover:cursor-pointer text-emerald-200 hover:text-white hover:bg-emerald-700 rounded-lg transition-colors duration-200"
             title="Explore"
           >
             <Compass className="h-6 w-6" />
@@ -104,7 +111,9 @@ export default function Navbar() {
         <div className="flex-shrink-0 ml-auto">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <button className="p-2 text-emerald-200 hover:text-white hover:bg-emerald-700 rounded-lg transition-colors duration-200">
+              <button 
+              id="user-icon-nav"
+              className="p-2 text-emerald-200 hover:text-white hover:bg-emerald-700 rounded-lg transition-colors duration-200 outline-0">
                 <User className="h-6 w-6" />
               </button>
             </DropdownMenuTrigger>
@@ -112,6 +121,7 @@ export default function Navbar() {
               <DropdownMenuItem
                 className="hover:bg-gray-200"
                 onClick={() => handleNavigation("/settings")}
+                id="settings-dropdown"
               >
                 <Settings className="h-4 w-4 mr-2" />
                 Settings
@@ -120,6 +130,7 @@ export default function Navbar() {
               <DropdownMenuItem
                 className="hover:bg-gray-200"
                 onClick={() => console.log("Logging out...")}
+                id="logout-dropdown"
               >
                 <LogOut className="h-4 w-4 mr-2" />
                 Logout

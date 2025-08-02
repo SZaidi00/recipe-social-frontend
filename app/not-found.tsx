@@ -2,8 +2,11 @@
 
 import React from 'react';
 import { Home, Search } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
-export default function Simple404Page() {
+export default function notFound() {
+const router = useRouter(); 
+
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="text-center max-w-md mx-auto">
@@ -18,15 +21,15 @@ export default function Simple404Page() {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors">
+          <button className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors"
+            onClick={() => {
+              router.push("/feed");
+            }}
+          >
             <Home className="w-4 h-4" />
             Go Home
           </button>
           
-          <button className="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-700 px-6 py-3 rounded-md font-medium border border-gray-300 hover:border-gray-400 transition-colors">
-            <Search className="w-4 h-4" />
-            Search
-          </button>
         </div>
       </div>
     </div>

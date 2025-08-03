@@ -3,6 +3,7 @@ TODO:
 - need to set landing page correctly to show login 
 - need a color scheme 
 - need to figure best way to hook up all the apis 
+- change browser logo 
 
 Auth: 
     - need to do login -- do i want to do google auth or have my own db? 

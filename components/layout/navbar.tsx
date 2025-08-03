@@ -77,7 +77,7 @@ export default function Navbar() {
                   onClick={() => handleNavigation("/feed")}
                   className="hidden sm:block text-white text-xl font-bold hover:cursor-pointer"
                 >
-                  Tarkeeb
+                  tarkeeb
                 </button>
               </div>
 
@@ -193,3 +193,5 @@ export default function Navbar() {
     </div>
   );
 }
+
+// https://www.heroui.com/docs/components/table

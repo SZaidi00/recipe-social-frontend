@@ -27,6 +27,18 @@ const FriendsManager = () => {
     { id: 4, name: 'Emma Davis', username: '@emmad', avatar: 'ED', mutualFriends: 5, status: 'suggested' },
     { id: 5, name: 'David Miller', username: '@davidm', avatar: 'DM', mutualFriends: 7, status: 'suggested' },
     { id: 6, name: 'Jessica Brown', username: '@jessicab', avatar: 'JB', mutualFriends: 3, status: 'suggested' },
+    // { id: 11, name: 'Alex Chen', username: '@alexchen', avatar: 'AC', mutualFriends: 12, status: 'suggested' },
+    // { id: 21, name: 'Sarah Williams', username: '@sarahw', avatar: 'SW', mutualFriends: 8, status: 'suggested' },
+    // { id: 31, name: 'Marcus Johnson', username: '@mjohnson', avatar: 'MJ', mutualFriends: 15, status: 'suggested' },
+    // { id: 41, name: 'Emma Davis', username: '@emmad', avatar: 'ED', mutualFriends: 5, status: 'suggested' },
+    // { id: 51, name: 'David Miller', username: '@davidm', avatar: 'DM', mutualFriends: 7, status: 'suggested' },
+    // { id: 61, name: 'Jessica Brown', username: '@jessicab', avatar: 'JB', mutualFriends: 3, status: 'suggested' },
+    // { id: 12, name: 'Alex Chen', username: '@alexchen', avatar: 'AC', mutualFriends: 12, status: 'suggested' },
+    // { id: 22, name: 'Sarah Williams', username: '@sarahw', avatar: 'SW', mutualFriends: 8, status: 'suggested' },
+    // { id: 32, name: 'Marcus Johnson', username: '@mjohnson', avatar: 'MJ', mutualFriends: 15, status: 'suggested' },
+    // { id: 42, name: 'Emma Davis', username: '@emmad', avatar: 'ED', mutualFriends: 5, status: 'suggested' },
+    // { id: 52, name: 'David Miller', username: '@davidm', avatar: 'DM', mutualFriends: 7, status: 'suggested' },
+    // { id: 62, name: 'Jessica Brown', username: '@jessicab', avatar: 'JB', mutualFriends: 3, status: 'suggested' },
   ]);
 
   const [requests] = useState([
@@ -69,7 +81,7 @@ const FriendsManager = () => {
   };
 
 return (
-    <div className="w-full max-w-6xl p-4">
+    <div className="w-full p-4">
       <div className="mb-6">
         <h1 className="text-3xl font-bold text-gray-800 mb-4">Friends</h1>
         
@@ -85,9 +97,9 @@ return (
           />
         </div> */}
       </div>
+{/* need to maybe come back to adjust the height of the table  */}
+      <div className="flex w-full border border-gray-200 rounded-lg overflow-hidden">
 
-      <div className="flex min-h-96 w-full border border-gray-200 rounded-lg overflow-hidden">
-        {/* Tab Triggers - Vertical on the left */}
         <div className="flex flex-col w-16 md:w-fit bg-gray-50 border-r border-gray-200">
           {tabs.map((tab) => {
             const IconComponent = tab.icon;
@@ -95,7 +107,7 @@ return (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-3 md:px-6 py-4 text-center md:text-left font-medium transition-colors duration-200 border-b border-gray-200 last:border-b-0 flex items-center justify-center md:justify-between relative ${
+                className={`md:px-4 py-4 text-center md:text-left font-medium transition-colors  border-b border-gray-200 last:border-b-0 flex items-center justify-center md:justify-between relative ${
                   activeTab === tab.id
                     ? 'bg-blue-500 text-white'
                     : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
@@ -106,7 +118,7 @@ return (
                   <IconComponent className="w-5 h-5 flex-shrink-0" />
                   <span className="hidden md:block">{tab.name}</span>
                 </div>
-                <span className={`px-2 py-1 text-xs rounded-full absolute top-1 right-1 md:static md:px-2 md:py-1 ${
+                <span className={`px-2 py-1 text-xs rounded-full absolute top-1 right-1 md:static md:px-2.5 ml-2 md:py-1 ${
                   activeTab === tab.id
                     ? 'bg-blue-600 text-white'
                     : 'bg-gray-200 text-gray-600'
